@@ -2,7 +2,6 @@
 markdown: kramdown
 plugins:
   - jekyll-redirect-from
-url: https://rhamiltonsf.github.io
 include:
   - CONTRIBUTING.md
   - README.md
