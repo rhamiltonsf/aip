@@ -2,6 +2,7 @@
 aip_index:
   order: 10
   display: General
+  scope: general
 exclude_from_search: true
 js:
   - /assets/js/aip/aip-index.js
