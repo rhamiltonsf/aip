@@ -2,7 +2,4 @@
 default.profraw
 _site
 .jekyll-metadata
-
-# npm
 node_modules/
-*/package-lock.json
