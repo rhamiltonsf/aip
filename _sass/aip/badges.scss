@@ -7,6 +7,11 @@
   padding: 2px 5px;
 }
 
+.aip-state-comment {
+  background-color: $glue-green-50;
+  border: 1px solid $glue-green-200;
+}
+
 .aip-state-reviewing {
   background-color: $glue-blue-50;
   border: 1px solid $glue-blue-200;

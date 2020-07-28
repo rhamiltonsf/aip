@@ -1,6 +1,52 @@
 # Contributing
 
-We'd love to accept your patches and contributions to this project.
+The Salesforce AIPs are maintained by the API Stewardship Committee, which
+welcomes all forms of contributions to this project.
+
+## Contributions
+
+Whether you want to propose new standards or contribute code to our repository, there are multiple ways to get involved with the AIP project.
+
+### Requesting or proposing AIPs
+
+The purpose of AIPs is to provide clarity to engineers about API shape and
+style so that our products can provide a consistent development experience
+across services. When an engineer finds that a best practice is not defined in
+the AIPs, they can best help Salesforce improve the standard by requesting or
+submitting an AIP. As we standardize our AIPs we enable our engineers to
+innovate faster, and push the boundaries of the use cases for APIs. Not every
+circumstance is going to be covered by an AIP.
+
+You do not have to be an AIP contributor, or a member of the API Stewardship
+committee to participate in this process. If you see a need for a standard that
+is not already defined in the AIPs, follow the instructions for [proposing an AIP][].
+
+### Join the API Stewardship Committee
+
+The API Stewardship Committee governs the common standard for Salesforce and helps organization level C4E teams maintain extensions of the Salesforce AIPs in their organizations. They meet bi-monthly to review API standard proposals, issues, and updates.
+
+The API Stewardship Committee is open to all interested Salesforce employees. Contact the API Stewardship Committee on [Chatter][] for more information.
+
+### Become an AIP Editor
+
+[AIP editors][] are in charge of maintaining consistency in structure and voice across the Salesforce AIPs.
+
+Editors are currently chosen by invitation only. However, anybody may draft and AIP as a proposal. The best way to be invited to join the AIP editors would be to draft AIPs in accordance to the [AIP style guide][aip style guide].
+
+### Improve the AIP infrastructure
+
+The AIP Infrastructure refers to the HTML, CSS, Liquid templates, and tooling
+used to display the AIP Markdown files in the browser. If you see something
+that you think could be improved, please create an [issue][] or a pull request
+in the AIP repository.
+
+Note that Salesforce AIPs are an extension of [aip.dev][]. Some fundamental
+infrastructure changes may be better submitted there. Salesforce has a CLA with
+Google allowing Salesforce employees to contribute to this project. If you
+would like to be included in the CLA, reach out to the [Open Source Programs
+Office][].
+
+For more information on contributing to [aip.dev][], reach out to the API Stewardship Committee on [Chatter][].
 
 ## Development Environment
 
@@ -15,11 +61,15 @@ If you have [Docker][3] installed, clone this repository and run the `serve.sh`
 file at the root of the repository. This script does two things:
 
 - It builds the provided Docker image (unless you already have it) and tags it
-  as `googleapis-site`.
-- It runs the `googleapis-site` image.
+  as `aip-site`.
+- It runs the `aip-site` image.
 
 The Jekyll development server uses port 4000 by default; point your web browser
 to `http://localhost:4000`, and you should see the site.
+
+**Note:** After building the Docker image for the first time, you may
+experience issues if Ruby dependencies change underneath you. If this happens,
+remove your Docker image (`docker rmi aip-site`) and run `serve.sh` again.
 
 ### Arguments
 
@@ -54,18 +104,6 @@ reloading).
 `_site` subdirectory. (The Docker image redirects this to an arbitrary spot in
 the image so as not to pollute the local disk.)
 
-## Contributor License Agreement
-
-Contributions to this project must be accompanied by a Contributor License
-Agreement. You (or your employer) retain the copyright to your contribution,
-this simply gives us permission to use and redistribute your contributions as
-part of the project. Head over to <https://cla.developers.google.com/> to see
-your current agreements on file or to sign a new one.
-
-You generally only need to submit a CLA once, so if you have already submitted
-one (even if it was for a different project), you probably do not need to do it
-again.
-
 ## Code reviews
 
 All submissions, including submissions by project members, require review. We
@@ -79,7 +117,15 @@ We use [prettier][4] to format Markdown, JavaScript, and (most) HTML, in order
 to ensure a consistent style throughout our source. You can add prettier as a
 plugin in most development environments.
 
+<!-- prettier-ignore-start -->
 [1]: https://pages.github.com/
 [2]: https://jekyllrb.com/
 [3]: https://docker.com/
 [4]: https://prettier.io/
+[aip.dev]: https://aip.dev
+[aip style guide]: ./aip/0008.md
+[open source programs office]: https://confluence.internal.salesforce.com/display/OPENSOURCE/Open+Source+Programs+Office
+[proposing an AIP]: ./aip/0001.md#proposing-an-aip
+[Chatter]: https://gus.lightning.force.com/lightning/r/CollaborationGroup/0F9B0000000LZe2KAG/view
+[AIP editors]: ./aip/0001.md#editors
+<!-- prettier-ignore-end -->

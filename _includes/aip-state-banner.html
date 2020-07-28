@@ -40,4 +40,8 @@
   <a href="{{ page.aip.replacement | relative_url}}">AIP-{{ page.aip.replacement }}</a
   >.
 </p>
+{%- elsif page.aip.state == 'comment' -%}
+<p id="aip-state-banner" class="callout tldr">
+  This AIP is currently in public comment. While in this state, this AIP may be adopted without fear of it being changed. However, it is still subject to non-breaking changes being added to it based on feedback from public implementors. If the need for breaking changes is identified, this AIP will be replaced as would an approved AIP after an appropriate deprecation period.
+</p>
 {% endif -%}

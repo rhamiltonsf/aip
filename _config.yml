@@ -2,24 +2,14 @@
 markdown: kramdown
 plugins:
   - jekyll-redirect-from
-url: https://rhamiltonsf.github.io
-baseurl: /aip
+url: https://git.soma.salesforce.com
+baseurl: /pages/API-Stewardship/sf.aip.dev
 github:
-  repository_url: https://github.com/googleapis/aip
+  repository_url: https://git.soma.salesforce.com/API-Stewardship/sf.aip.dev
 include:
   - CONTRIBUTING.md
   - README.md
 defaults:
-  - scope:
-      path: ''
-    values:
-      areas:
-        aog: Actions on Google
-        apps: GSuite
-        cloud: Google Cloud Platform
-        client-libraries: Client Libraries
-      js:
-        - /assets/js/proto-syntax.js
   - scope:
       path: aip
     values:
